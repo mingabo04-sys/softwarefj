@@ -16,6 +16,10 @@ try:
 
     cliente = Cliente(nombre, correo)
 
+    registrar_log(
+        f"[EXITO] Cliente registrado: {cliente.nombre}"
+    )
+
     print("\nSeleccione su servicio")
     print("-----------------------")
 
@@ -41,7 +45,9 @@ try:
 
         except ValueError as e:
 
-            registrar_log(e)
+            registrar_log(
+                f"[ERROR] {e}"
+            )
 
             print("\nOpcion invalida.")
             print("Por favor intente nuevamente.")
@@ -61,9 +67,17 @@ try:
         horas = int(input("Cantidad de horas: "))
         servicio = Asesoria(horas)
 
+    registrar_log(
+        f"[EXITO] Servicio seleccionado: {servicio.nombre}"
+    )
+
     reserva = Reserva(cliente, servicio)
 
     reserva.confirmar()
+
+    registrar_log(
+        f"[EXITO] Reserva confirmada para {cliente.nombre}"
+    )
 
     print("\n===== RESUMEN DE LA RESERVA =====")
     print(cliente.mostrar_datos())
@@ -73,10 +87,12 @@ try:
 
 except Exception as e:
 
-    registrar_log(e)
+    registrar_log(
+        f"[ERROR] {e}"
+    )
 
     print("\nError:", e)
 
 finally:
 
-    print("\nGracias por usar Software FJ")
+    print("\nGracias por tu reserva")
