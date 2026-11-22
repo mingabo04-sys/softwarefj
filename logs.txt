@@ -3,3 +3,19 @@
 2026-11-22 16:29:00.027475 - El cliente no existe
 2026-11-22 16:39:56.948657 - invalid literal for int() with base 10: 'alquiler de equipo'
 2026-11-22 17:10:37.475679 - invalid literal for int() with base 10: 'reserva'
+2026-11-22 17:28:10.015864 - [EXITO] Cliente registrado: fernasn Rodriguez
+2026-11-22 17:28:15.346942 - [EXITO] Servicio seleccionado: Asesoria Especializada
+2026-11-22 17:28:15.347402 - [EXITO] Reserva confirmada para fernasn Rodriguez
+2026-11-22 17:29:34.168116 - [EXITO] Cliente registrado: Luz rodriguez
+2026-11-22 17:29:46.523092 - [EXITO] Servicio seleccionado: Reserva de Sala
+2026-11-22 17:29:46.523482 - [EXITO] Reserva confirmada para Luz rodriguez
+2026-11-22 17:31:48.947385 - [EXITO] Cliente registrado: Camila Espejo
+2026-11-22 18:05:45.909056 - [ERROR] invalid literal for int() with base 10: 'johana p'
+2026-11-22 18:06:16.849720 - [EXITO] Servicio seleccionado: Reserva de Sala
+2026-11-22 18:06:16.850272 - [EXITO] Reserva confirmada para Camila Espejo
+2026-11-22 18:07:55.204136 - [EXITO] Cliente registrado: jes
+2026-11-22 18:08:08.854647 - [ERROR] invalid literal for int() with base 10: 'hola'
+2026-11-22 18:08:13.255459 - [ERROR] invalid literal for int() with base 10: 'hoa'
+2026-11-22 18:08:19.241850 - [EXITO] Servicio seleccionado: Asesoria Especializada
+2026-11-22 18:08:19.242483 - [EXITO] Reserva confirmada para jes
+2026-11-22 18:08:49.413404 - [ERROR] Correo invalido
