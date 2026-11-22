@@ -1,1 +1,4 @@
 
+2026-11-22 16:29:00.025765 - Correo invalido
+2026-11-22 16:29:00.027475 - El cliente no existe
+2026-11-22 16:39:56.948657 - invalid literal for int() with base 10: 'alquiler de equipo'
