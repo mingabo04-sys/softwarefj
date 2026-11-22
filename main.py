@@ -73,17 +73,21 @@ except ReservaError as e:
     print("Error controlado:", e)
 
 # OPERACION 10
+
 try:
 
-    numero = int("abc")
+    numero = int("123")
 
 except ValueError as e:
 
     registrar_log(e)
 
-    raise ReservaError(
-        "Error durante el procesamiento de la reserva"
-    ) from e
+    print("Error:", e)
+
+else:
+
+    print("Conversion realizada correctamente")
 
 finally:
+
     print("Finalizacion del sistema")
