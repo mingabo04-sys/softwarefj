@@ -16,32 +16,67 @@ try:
 
     cliente = Cliente(nombre, correo)
 
-print("\nSeleccione su servicio")
-print("-----------------------")
+    print("\nSeleccione su servicio")
+    print("-----------------------")
 
-while True:
+    while True:
 
-    try:
+        try:
 
-        print("\nServicios disponibles:")
-        print("1. Reserva de sala")
-        print("2. Alquiler de equipo")
-        print("3. Asesoria especializada")
+            print("\nServicios disponibles:")
+            print("1. Reserva de sala")
+            print("2. Alquiler de equipo")
+            print("3. Asesoria especializada")
 
-        opcion = int(
-            input("\nDigite el numero del servicio: ")
-        )
+            opcion = int(
+                input("\nDigite el numero del servicio: ")
+            )
 
-        if opcion in [1, 2, 3]:
-            break
+            if opcion in [1, 2, 3]:
+                break
 
-        raise ValueError(
-            "Debe seleccionar 1, 2 o 3"
-        )
+            raise ValueError(
+                "Debe seleccionar 1, 2 o 3"
+            )
 
-    except ValueError as e:
+        except ValueError as e:
 
-        registrar_log(e)
+            registrar_log(e)
 
-        print("\nOpcion invalida.")
-        print("Por favor intente nuevamente.")
+            print("\nOpcion invalida.")
+            print("Por favor intente nuevamente.")
+
+    if opcion == 1:
+
+        horas = int(input("Cantidad de horas: "))
+        servicio = ReservaSala(horas)
+
+    elif opcion == 2:
+
+        dias = int(input("Cantidad de dias: "))
+        servicio = AlquilerEquipo(dias)
+
+    else:
+
+        horas = int(input("Cantidad de horas: "))
+        servicio = Asesoria(horas)
+
+    reserva = Reserva(cliente, servicio)
+
+    reserva.confirmar()
+
+    print("\n===== RESUMEN DE LA RESERVA =====")
+    print(cliente.mostrar_datos())
+    print(servicio.descripcion())
+    print("Costo:", servicio.calcular_costo())
+    print(reserva.mostrar_reserva())
+
+except Exception as e:
+
+    registrar_log(e)
+
+    print("\nError:", e)
+
+finally:
+
+    print("\nGracias por usar Software FJ")
