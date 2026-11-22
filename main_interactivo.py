@@ -16,47 +16,32 @@ try:
 
     cliente = Cliente(nombre, correo)
 
-    print("\nServicios disponibles:")
-    print("1. Reserva de sala")
-    print("2. Alquiler de equipo")
-    print("3. Asesoria especializada")
+print("\nSeleccione su servicio")
+print("-----------------------")
 
-    opcion = int(input("\nSeleccione un servicio: "))
+while True:
 
-    if opcion == 1:
+    try:
 
-        horas = int(input("Cantidad de horas: "))
-        servicio = ReservaSala(horas)
+        print("\nServicios disponibles:")
+        print("1. Reserva de sala")
+        print("2. Alquiler de equipo")
+        print("3. Asesoria especializada")
 
-    elif opcion == 2:
+        opcion = int(
+            input("\nDigite el numero del servicio: ")
+        )
 
-        dias = int(input("Cantidad de dias: "))
-        servicio = AlquilerEquipo(dias)
+        if opcion in [1, 2, 3]:
+            break
 
-    elif opcion == 3:
+        raise ValueError(
+            "Debe seleccionar 1, 2 o 3"
+        )
 
-        horas = int(input("Cantidad de horas: "))
-        servicio = Asesoria(horas)
+    except ValueError as e:
 
-    else:
-        raise ValueError("Opcion no valida")
+        registrar_log(e)
 
-    reserva = Reserva(cliente, servicio)
-
-    reserva.confirmar()
-
-    print("\n===== RESUMEN DE LA RESERVA =====")
-    print(cliente.mostrar_datos())
-    print(servicio.descripcion())
-    print("Costo:", servicio.calcular_costo())
-    print(reserva.mostrar_reserva())
-
-except Exception as e:
-
-    registrar_log(e)
-
-    print("Error:", e)
-
-finally:
-
-    print("\nGracias por usar Software FJ")
+        print("\nOpcion invalida.")
+        print("Por favor intente nuevamente.")
