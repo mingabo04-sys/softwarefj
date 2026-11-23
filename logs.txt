@@ -19,3 +19,8 @@
 2026-11-22 18:08:19.241850 - [EXITO] Servicio seleccionado: Asesoria Especializada
 2026-11-22 18:08:19.242483 - [EXITO] Reserva confirmada para jes
 2026-11-22 18:08:49.413404 - [ERROR] Correo invalido
+2026-11-22 18:17:32.972320 - [ERROR] Correo invalido
+2026-11-22 18:17:53.037554 - [ERROR] Correo invalido
+2026-11-22 18:18:09.669788 - [EXITO] Cliente registrado: teffy
+2026-11-22 18:18:19.597052 - [EXITO] Servicio seleccionado: Alquiler de Equipo
+2026-11-22 18:18:19.597647 - [EXITO] Reserva confirmada para teffy
