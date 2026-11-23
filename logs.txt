@@ -24,3 +24,7 @@
 2026-11-22 18:18:09.669788 - [EXITO] Cliente registrado: teffy
 2026-11-22 18:18:19.597052 - [EXITO] Servicio seleccionado: Alquiler de Equipo
 2026-11-22 18:18:19.597647 - [EXITO] Reserva confirmada para teffy
+2026-11-22 19:24:03.752158 - [EXITO] Cliente registrado: jeje
+2026-11-22 19:24:07.638149 - [ERROR] Debe seleccionar 1, 2 o 3
+2026-11-22 19:24:12.508079 - [EXITO] Servicio seleccionado: Asesoria Especializada
+2026-11-22 19:24:12.508606 - [EXITO] Reserva confirmada para jeje
